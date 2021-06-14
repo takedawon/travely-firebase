@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment"
+          android:icon="@drawable/gnb_home_n"
+          android:title="홈"/>
+    <item android:id="@+id/searchFragment"
+          android:icon="@drawable/gnb_search_n"
+          android:title="검색"/>
+    <item android:id="@+id/addFragment"
+          android:icon="@drawable/gnb_add_n"
+          android:title="홈"/>
+    <item android:id="@+id/notiFragment"
+          android:icon="@drawable/gnb_noti_n"
+          android:title="홈"/>
+    <item android:id="@+id/myPageFragment"
+          android:icon="@drawable/gnb_my_page_n"
+          android:title="홈"/>
+</menu>
