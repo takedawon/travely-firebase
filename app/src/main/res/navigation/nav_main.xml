@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_main"
-    app:startDestination="@id/homeFragment">
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_main"
+            app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.lanic.travely.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment"/>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.lanic.travely.AddFragment"
+        android:label="AddFragment"/>
+    <fragment
+        android:id="@+id/myPageFragment"
+        android:name="com.lanic.travely.MyPageFragment"
+        android:label="MyPageFragment"/>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.lanic.travely.SearchFragment"
+        android:label="SearchFragment"/>
+    <fragment
+        android:id="@+id/notiFragment"
+        android:name="com.lanic.travely.NotiFragment"
+        android:label="NotiFragment"/>
+
+
 </navigation>
