@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.lanic.travely.base.BaseFragment
 import com.lanic.travely.databinding.FragmentHomeBinding
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>(
-    layoutId = R.layout.fragment_home
+class SearchFragment : BaseFragment<FragmentHomeBinding>(
+    layoutId = R.layout.fragment_search
 ) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
