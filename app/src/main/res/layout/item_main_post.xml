@@ -19,6 +19,7 @@
             android:layout_height="36dp"
             android:layout_marginTop="16dp"
             android:layout_marginStart="32dp"
+            app:setUrl="@{postData.profileUrl}"
             tools:src="@tools:sample/avatars"
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/iv_profile"
@@ -51,10 +52,11 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_marginTop="12dp"
             android:scaleType="centerCrop"
+            app:setUrl="@{postData.url}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_destination"
@@ -112,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@{postData.content}"
-            tools:text="여행 2일차 다대포해수욕장!\n여기 상인들 담합이 엄청나서 뭘 사기가 참..."
+            tools:text="여행 2일차 다대포해수욕장!"
             android:textColor="@color/color_de000000"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/textView"
@@ -121,13 +123,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/regular"
             android:layout_marginStart="4dp"
+            style="@style/regular"
             android:text="더보기"
             android:textColor="@color/color_999999"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView2"
-            app:layout_constraintStart_toEndOf="@+id/textView2"/>
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintVertical_bias="1.0"/>
 
         <TextView
             android:layout_width="wrap_content"

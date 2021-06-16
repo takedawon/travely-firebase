@@ -25,14 +25,20 @@ class HomePostAdapter :
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        holder.bind()
+        holder.bind(getItem(position))
     }
 }
 
 class MainViewHolder(val binding: ItemMainPostBinding) : RecyclerView.ViewHolder(binding.root) {
-    fun bind() {
-
+    fun bind(postData: DummyHomeData) {
+        binding.postData = postData
     }
 }
 
-data class DummyHomeData(val nickname: String = "", val destinationName: String = "", val content: String = "")
+data class DummyHomeData(
+    val profileUrl: String = "https://mblogthumb-phinf.pstatic.net/MjAxODA5MTRfMzQg/MDAxNTM2ODgxNzA5MjQ3.Dczu9sx41LSz443BAzIWlhyGGJLp1xHTTmXcVjrcRn8g.trPmx1hnXRMqLbFPchSSvXAjuKngzMJ9l8c8mk_-ILIg.PNG.catlovercat/20180913_133014.png?type=w800",
+    val nickname: String = "",
+    val destinationName: String = "",
+    val content: String = "",
+    val url: String = "https://cdn.pixabay.com/photo/2014/01/02/10/09/sea-237486__480.jpg"
+)

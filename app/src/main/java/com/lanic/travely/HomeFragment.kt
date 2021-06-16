@@ -21,7 +21,25 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(
                 adapter = homePostAdapter
             }
         }
-        homePostAdapter.submitList(listOf(DummyHomeData("라닉", "경기도", "우왕조아따"), DummyHomeData("라닉", "경기도", "우왕조아따")))
+        homePostAdapter.submitList(
+            listOf(
+                DummyHomeData(
+                    "https://mblogthumb-phinf.pstatic.net/MjAxODA5MTRfMzQg/MDAxNTM2ODgxNzA5MjQ3.Dczu9sx41LSz443BAzIWlhyGGJLp1xHTTmXcVjrcRn8g.trPmx1hnXRMqLbFPchSSvXAjuKngzMJ9l8c8mk_-ILIg.PNG.catlovercat/20180913_133014.png?type=w800",
+                    "라닉",
+                    "경기도",
+                    "우왕조아따",
+                    "https://cdn.gukjenews.com/news/photo/202001/1228495_1008800_1059.png"
+                ),
+                DummyHomeData(
+                    "https://mblogthumb-phinf.pstatic.net/MjAxODA5MTRfMzQg/MDAxNTM2ODgxNzA5MjQ3.Dczu9sx41LSz443BAzIWlhyGGJLp1xHTTmXcVjrcRn8g.trPmx1hnXRMqLbFPchSSvXAjuKngzMJ9l8c8mk_-ILIg.PNG.catlovercat/20180913_133014.png?type=w800",
+
+                    "라닉",
+                    "경기도",
+                    "우왕조아따",
+                    "https://cdn.pixabay.com/photo/2014/01/02/10/09/sea-237486__480.jpg"
+                )
+            )
+        )
 
     }
 }
