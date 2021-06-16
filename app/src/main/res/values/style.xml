@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="medium">
+        <item name="fontFamily">@font/medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="regular">
+        <item name="fontFamily">@font/regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+</resources>
