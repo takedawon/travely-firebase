@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1088108160960",
+    "project_id": "travely-firebase",
+    "storage_bucket": "travely-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088108160960:android:b039e38328174f65ee0a25",
+        "android_client_info": {
+          "package_name": "com.lanic.travely"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088108160960-nvish753c0rkmoa3lfpg9mfoo6bjabrt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lanic.travely",
+            "certificate_hash": "7b8fc7af3b4b7d5ed4ff29a473c1d3c360356ca0"
+          }
+        },
+        {
+          "client_id": "1088108160960-6bluf6sufbc4o8512pug7v0oa1vh7vrm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtUBXsbbVmRSNcHT3okq-fMu23pMSmfgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088108160960-6bluf6sufbc4o8512pug7v0oa1vh7vrm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
