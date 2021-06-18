@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.lanic.travely.ui.login.RegisterTypeSelectViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_join"
+            style="@style/bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="회원가입"
+            android:textColor="@color/color_de000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/iv_back"
+            app:layout_constraintTop_toBottomOf="@+id/iv_back"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/shape_so_00c0f1_r8"
+            android:gravity="center"
+            android:padding="12dp"
+            android:onClick="@{()->vm.goToInputEmail()}"
+            android:text="이메일 회원가입"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_join"/>
+
+
+
+        <com.lanic.travely.ui.SnsButton
+            android:id="@+id/sb_kakao"
+            style="@style/medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginTop="16dp"
+            app:background_drawable="@drawable/shape_kakao_r8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:symbol_drawable="@drawable/ic_kakao_logo"
+            app:text="카카오 회원가입"
+            app:text_color="@color/color_391b1b"/>
+
+        <com.lanic.travely.ui.SnsButton
+            android:id="@+id/sb_naver"
+            style="@style/medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sb_kakao"
+            app:symbol_drawable="@drawable/ic_naver_logo"
+            app:background_drawable="@drawable/shape_naver_r8"
+            app:text="네이버 회원가입"
+            app:text_color="@color/white"/>
+
+        <com.lanic.travely.ui.SnsButton
+            android:id="@+id/sb_facebook"
+            style="@style/medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sb_naver"
+            app:symbol_drawable="@drawable/ic_facebook_logo"
+            app:background_drawable="@drawable/shape_facebook_r8"
+            app:text="페이스북 회원가입"
+            app:text_color="@color/white"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

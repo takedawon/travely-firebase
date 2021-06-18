@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_auth"
+            app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.lanic.travely.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_to_registerTypeSelect"
+            app:destination="@id/registerTypeSelectFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registerTypeSelectFragment"
+        android:name="com.lanic.travely.ui.login.RegisterTypeSelectFragment"
+        android:label="RegisterTypeSelectFragment"
+        tools:layout="@layout/fragment_register_type_select">
+        <action
+            android:id="@+id/action_to_registerEmail"
+            app:destination="@id/registerEmailFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registerEmailFragment"
+        android:name="com.lanic.travely.ui.login.RegisterEmailFragment"
+        android:label="RegisterEmailFragment"
+        tools:layout="@layout/fragment_register_email"/>
+</navigation>

@@ -1,11 +1,11 @@
-package com.lanic.travely
+package com.lanic.travely.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.lanic.travely.R
 import com.lanic.travely.base.BaseActivity
 import com.lanic.travely.databinding.ActivityLoginBinding
 
-class LoginActivity : BaseActivity<ActivityLoginBinding>(
+class AuthActivity : BaseActivity<ActivityLoginBinding>(
     layoutId = R.layout.activity_login
 ) {
     override fun onCreate(savedInstanceState: Bundle?) {
