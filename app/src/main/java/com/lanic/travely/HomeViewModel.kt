@@ -17,7 +17,6 @@ class HomeViewModel : BaseViewModel() {
         db.collection(POST)
             .get()
             .addOnSuccessListener { documentSnapshot ->
-                documentSnapshot.toObjects<PostData>()
             }
             .addOnFailureListener {
 
