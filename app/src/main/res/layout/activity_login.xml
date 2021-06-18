@@ -70,5 +70,110 @@
             android:text="자동 로그인"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_password"/>
+
+        <TextView
+            android:id="@+id/tv_find_password"
+            style="@style/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="20dp"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:gravity="center_vertical"
+            android:text="비밀번호 찾기"
+            android:textColor="@color/color_777777"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/et_password"
+            app:layout_constraintTop_toBottomOf="@+id/et_password"/>
+
+        <TextView
+            android:id="@+id/tv_login"
+            style="@style/bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_so_00c0f1_r8"
+            android:gravity="center"
+            android:padding="12dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            android:text="로그인"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_auto_login"/>
+
+        <TextView
+            android:id="@+id/tv_info"
+            style="@style/regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="새로 오셨나요?"
+            android:textColor="@color/color_777777"
+            android:gravity="end"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_join"
+            app:layout_constraintStart_toStartOf="@+id/tv_login"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login"/>
+
+        <TextView
+            android:id="@+id/tv_join"
+            style="@style/bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="회원가입 하기!"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_info"
+            app:layout_constraintEnd_toEndOf="@+id/tv_login"
+            app:layout_constraintStart_toEndOf="@+id/tv_info"
+            app:layout_constraintTop_toTopOf="@+id/tv_info"/>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="#eeeeee"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_join"/>
+
+        <com.lanic.travely.ui.SnsButton
+            android:id="@+id/sb_kakao"
+            style="@style/medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line"
+            app:symbol_drawable="@drawable/ic_kakao_logo"
+            app:background_color="@color/color_kakao"
+            app:text="카카오 로그인"
+            app:text_color="@color/color_391b1b"/>
+
+        <com.lanic.travely.ui.SnsButton
+            android:id="@+id/sb_naver"
+            style="@style/medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sb_kakao"
+            app:symbol_drawable="@drawable/ic_naver_logo"
+            app:background_color="@color/color_naver"
+            app:text="네이버 로그인"
+            app:text_color="@color/color_391b1b"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

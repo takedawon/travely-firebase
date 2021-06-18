@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SnsButton">
+        <attr name="background_color" format="reference|integer"/>
+        <attr name="symbol_drawable" format="reference|integer"/>
+        <attr name="text" format="reference|string"/>
+        <attr name="text_color" format="reference|integer"/>
+    </declare-styleable>
+</resources>

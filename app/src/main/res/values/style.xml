@@ -8,4 +8,8 @@
         <item name="fontFamily">@font/regular</item>
         <item name="android:includeFontPadding">false</item>
     </style>
+    <style name="bold">
+        <item name="fontFamily">@font/bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
 </resources>
