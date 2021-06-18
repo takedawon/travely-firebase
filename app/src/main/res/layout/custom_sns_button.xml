@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="12dp"
-    android:background="@drawable/shape_r8"
-    android:backgroundTint="@color/color_kakao"
     android:gravity="center">
     <ImageView
         android:id="@+id/iv_symbol"
@@ -21,7 +19,6 @@
         android:layout_height="wrap_content"
         android:textSize="14sp"
         style="@style/medium"
-        android:textColor="@color/color_391b1b"
         android:gravity="center"
         android:text="카카오 로그인"/>
 

@@ -45,10 +45,11 @@ class SnsButton : LinearLayout {
     }
 
     private fun setTypeArray(typedArray: TypedArray) {
-        val backgroundColor = typedArray.getColor(
-            R.styleable.SnsButton_background_color,0)
+        val backgroundRes = typedArray.getResourceId(
+            R.styleable.SnsButton_background_drawable, R.drawable.shape_naver_r8
+        )
 
-        layout.setBackgroundColor(backgroundColor)
+        layout.setBackgroundResource(backgroundRes)
 
         val symbolDrawable = typedArray.getResourceId(
             R.styleable.SnsButton_symbol_drawable,
@@ -58,7 +59,9 @@ class SnsButton : LinearLayout {
         symbol.setImageResource(symbolDrawable)
 
         val text = typedArray.getText(R.styleable.SnsButton_text)
+        val textColor = typedArray.getColor(R.styleable.SnsButton_text_color, ContextCompat.getColor(context, R.color.white))
         snsText.text = text
+        snsText.setTextColor(textColor)
 
         typedArray.recycle()
     }

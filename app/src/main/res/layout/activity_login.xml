@@ -27,6 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
             style="@style/regular"
             android:layout_marginStart="28dp"
             android:layout_marginEnd="28dp"
@@ -45,6 +47,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginStart="28dp"
+            android:inputType="textPassword"
+            android:singleLine="true"
             android:layout_marginEnd="28dp"
             android:background="@drawable/shape_so_fafafa_st_dddddd_1dp_r8"
             android:hint="비밀번호를 입력하세요."
@@ -156,7 +160,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view_line"
             app:symbol_drawable="@drawable/ic_kakao_logo"
-            app:background_color="@color/color_kakao"
+            app:background_drawable="@drawable/shape_kakao_r8"
             app:text="카카오 로그인"
             app:text_color="@color/color_391b1b"/>
 
@@ -172,8 +176,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sb_kakao"
             app:symbol_drawable="@drawable/ic_naver_logo"
-            app:background_color="@color/color_naver"
+            app:background_drawable="@drawable/shape_naver_r8"
             app:text="네이버 로그인"
-            app:text_color="@color/color_391b1b"/>
+            app:text_color="@color/white"/>
+
+        <com.lanic.travely.ui.SnsButton
+            android:id="@+id/sb_facebook"
+            style="@style/medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sb_naver"
+            app:symbol_drawable="@drawable/ic_facebook_logo"
+            app:background_drawable="@drawable/shape_facebook_r8"
+            app:text="페이스북 로그인"
+            app:text_color="@color/white"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
