@@ -31,5 +31,14 @@
         android:id="@+id/registerEmailFragment"
         android:name="com.lanic.travely.ui.login.RegisterEmailFragment"
         android:label="RegisterEmailFragment"
-        tools:layout="@layout/fragment_register_email"/>
+        tools:layout="@layout/fragment_register_email">
+        <action
+            android:id="@+id/action_to_registerNickname"
+            app:destination="@id/registerNicknameFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registerNicknameFragment"
+        android:name="com.lanic.travely.ui.login.RegisterNicknameFragment"
+        android:label="RegisterNicknameFragment"
+        tools:layout="@layout/fragment_register_nickname"/>
 </navigation>

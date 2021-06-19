@@ -7,10 +7,10 @@ import com.lanic.travely.utils.Event
 
 class RegisterEmailViewModel:BaseViewModel() {
 
-    private val _goToInputEmail = MutableLiveData<Event<Unit>>()
-    val goToInputEmail : LiveData<Event<Unit>> = _goToInputEmail
+    private val _goToInputNickname = MutableLiveData<Event<Unit>>()
+    val goToInputNickname : LiveData<Event<Unit>> = _goToInputNickname
 
-    fun goToInputEmail() {
-        _goToInputEmail.value = Event(Unit)
+    fun goToInputNickname() {
+        _goToInputNickname.value = Event(Unit)
     }
 }
