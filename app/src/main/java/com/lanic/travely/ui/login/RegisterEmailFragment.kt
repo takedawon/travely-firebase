@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.lanic.travely.R
 import com.lanic.travely.base.BaseFragment
 import com.lanic.travely.databinding.FragmentLoginBinding
 import com.lanic.travely.databinding.FragmentRegisterEmailBinding
 import com.lanic.travely.utils.EventObserver
+import com.lanic.travely.utils.isCheckEmail
 
 class RegisterEmailFragment : BaseFragment<FragmentRegisterEmailBinding>(
     layoutId = R.layout.fragment_register_email
@@ -25,6 +27,15 @@ class RegisterEmailFragment : BaseFragment<FragmentRegisterEmailBinding>(
 
         viewModel.goToInputNickname.observe(viewLifecycleOwner, EventObserver {
             findNavController().navigate(R.id.action_to_registerNickname)
+        })
+
+        viewModel.email.observe(viewLifecycleOwner, Observer { email->
+            if(email.isNotEmpty() && isCheckEmail(email).not()) {
+                binding.tilEmail.error = "이메일 형식과 일치하지 않습니다."
+            } else {
+                binding.tilEmail.error = ""
+                binding.tilEmail.isErrorEnabled = false
+            }
         })
     }
 
