@@ -7,7 +7,7 @@
 
         <variable
             name="vm"
-            type="com.lanic.travely.ui.login.RegisterNicknameViewModel"/>
+            type="com.lanic.travely.ui.login.RegisterBirthViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -41,40 +41,20 @@
             style="@style/medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Travely에서 사용하실 닉네임을 입력해 주세요"
             android:layout_marginTop="30dp"
+            android:text="생일을 입력해 주세요"
             android:textColor="@color/color_de000000"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/tv_join"
             app:layout_constraintTop_toBottomOf="@+id/tv_join"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_email"
+        <DatePicker
+            android:id="@+id/pk_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:errorEnabled="true"
-            app:errorTextColor="@color/color_red_warning"
-            app:hintEnabled="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_input_email">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tie_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:singleLine="true"
-                android:inputType="textEmailAddress"
-                style="@style/regular"
-                android:layout_marginStart="28dp"
-                android:layout_marginEnd="28dp"
-                android:background="@drawable/shape_so_fafafa_st_dddddd_1dp_r8"
-                android:hint="영문 또는 한글 2 ~ 8자리"
-                android:padding="16dp"
-                android:textColorHint="#999999"
-                android:textSize="14sp"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            app:layout_constraintTop_toBottomOf="@+id/tv_input_email"/>
 
         <TextView
             android:id="@+id/tv_next"
@@ -85,12 +65,11 @@
             android:background="@drawable/shape_so_00c0f1_r8"
             android:gravity="center"
             android:padding="12dp"
-            android:onClick="@{()->vm.goToInputBirth()}"
             android:text="다음으로"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/til_email"/>
+            app:layout_constraintTop_toBottomOf="@+id/pk_time"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
