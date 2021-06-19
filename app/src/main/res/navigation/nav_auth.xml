@@ -58,5 +58,14 @@
         android:id="@+id/registerPasswordFragment"
         android:name="com.lanic.travely.ui.login.RegisterPasswordFragment"
         android:label="RegisterPasswordFragment"
-        tools:layout="@layout/fragment_register_password"/>
+        tools:layout="@layout/fragment_register_password">
+        <action
+            android:id="@+id/action_to_registerComplete"
+            app:destination="@id/registerCompleteFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registerCompleteFragment"
+        android:name="com.lanic.travely.ui.login.RegisterCompleteFragment"
+        android:label="RegisterCompleteFragment"
+        tools:layout="@layout/fragment_register_complete"/>
 </navigation>

@@ -10,22 +10,21 @@ import androidx.navigation.fragment.findNavController
 import com.lanic.travely.R
 import com.lanic.travely.base.BaseFragment
 import com.lanic.travely.databinding.FragmentLoginBinding
+import com.lanic.travely.databinding.FragmentRegisterBirthBinding
+import com.lanic.travely.databinding.FragmentRegisterCompleteBinding
 import com.lanic.travely.databinding.FragmentRegisterNicknameBinding
-import com.lanic.travely.databinding.FragmentRegisterPasswordBinding
 import com.lanic.travely.utils.EventObserver
 
-class RegisterPasswordFragment : BaseFragment<FragmentRegisterPasswordBinding>(
-    layoutId = R.layout.fragment_register_password
+class RegisterCompleteFragment : BaseFragment<FragmentRegisterCompleteBinding>(
+    layoutId = R.layout.fragment_register_complete
 ) {
-
-    private val viewModel: RegisterPasswordViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.vm = viewModel
 
-        viewModel.joinComplete.observe(viewLifecycleOwner, EventObserver {
-            findNavController().navigate(R.id.action_to_registerComplete)
-        })
+        binding.tvComplete.setOnClickListener {
+            requireActivity().finish()
+        }
     }
+
 }
