@@ -7,4 +7,11 @@ import com.lanic.travely.utils.Event
 
 class RegisterBirthViewModel:BaseViewModel() {
 
+    private val _goToPasswordInput = MutableLiveData<Event<Unit>>()
+    val goToPasswordInput : LiveData<Event<Unit>> = _goToPasswordInput
+
+    fun onGoToPasswordInput() {
+        _goToPasswordInput.value = Event(Unit)
+    }
+
 }
