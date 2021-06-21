@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.lanic.travely.R
 import com.lanic.travely.base.BaseFragment
 import com.lanic.travely.databinding.FragmentLoginBinding
@@ -20,13 +21,18 @@ class RegisterBirthFragment : BaseFragment<FragmentRegisterBirthBinding>(
 
     val viewModel:RegisterBirthViewModel by viewModels()
 
+    val args: RegisterBirthFragmentArgs by navArgs()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.vm = viewModel
 
         viewModel.goToPasswordInput.observe(viewLifecycleOwner, EventObserver {
-            findNavController().navigate(R.id.action_to_registerPassword)
+            val registerData = args.registerData.apply {
+                birth = viewModel.getBirth()
+            }
+            findNavController().navigate(RegisterBirthFragmentDirections.actionToRegisterPassword(registerData))
         })
 
     }

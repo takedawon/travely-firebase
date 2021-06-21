@@ -44,6 +44,9 @@
         <action
             android:id="@+id/action_to_registerBirth"
             app:destination="@id/registerBirthFragment"/>
+        <argument
+            android:name="registerData"
+            app:argType="com.lanic.travely.data.RegisterData"/>
     </fragment>
     <fragment
         android:id="@+id/registerBirthFragment"
@@ -53,6 +56,9 @@
         <action
             android:id="@+id/action_to_registerPassword"
             app:destination="@id/registerPasswordFragment"/>
+        <argument
+            android:name="registerData"
+            app:argType="com.lanic.travely.data.RegisterData"/>
     </fragment>
     <fragment
         android:id="@+id/registerPasswordFragment"
@@ -62,6 +68,9 @@
         <action
             android:id="@+id/action_to_registerComplete"
             app:destination="@id/registerCompleteFragment"/>
+        <argument
+            android:name="registerData"
+            app:argType="com.lanic.travely.data.RegisterData"/>
     </fragment>
     <fragment
         android:id="@+id/registerCompleteFragment"

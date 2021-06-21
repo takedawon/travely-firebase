@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.lanic.travely.R
 import com.lanic.travely.base.BaseFragment
+import com.lanic.travely.data.RegisterData
 import com.lanic.travely.databinding.FragmentLoginBinding
 import com.lanic.travely.databinding.FragmentRegisterEmailBinding
 import com.lanic.travely.utils.EventObserver
@@ -26,17 +27,21 @@ class RegisterEmailFragment : BaseFragment<FragmentRegisterEmailBinding>(
         binding.vm = viewModel
 
         viewModel.goToInputNickname.observe(viewLifecycleOwner, EventObserver {
-            findNavController().navigate(R.id.action_to_registerNickname)
+            val registerData = RegisterData(email = viewModel.getUserEmail())
+            val action =
+                RegisterEmailFragmentDirections.actionToRegisterNickname(registerData)
+            findNavController().navigate(action)
         })
 
-        viewModel.email.observe(viewLifecycleOwner, Observer { email->
-            if(email.isNotEmpty() && isCheckEmail(email).not()) {
-                binding.tilEmail.error = "이메일 형식과 일치하지 않습니다."
-            } else {
-                binding.tilEmail.error = ""
-                binding.tilEmail.isErrorEnabled = false
+        viewModel.email.observe(viewLifecycleOwner, Observer { email ->
+            with(binding.tilEmail) {
+                if (email.isNotEmpty() && isCheckEmail(email).not()) {
+                    error = "이메일 형식과 일치하지 않습니다."
+                } else {
+                    error = ""
+                    isErrorEnabled = false
+                }
             }
         })
     }
-
 }

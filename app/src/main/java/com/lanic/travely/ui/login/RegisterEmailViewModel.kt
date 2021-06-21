@@ -5,14 +5,16 @@ import androidx.lifecycle.MutableLiveData
 import com.lanic.travely.base.BaseViewModel
 import com.lanic.travely.utils.Event
 
-class RegisterEmailViewModel:BaseViewModel() {
+class RegisterEmailViewModel : BaseViewModel() {
 
     private val _goToInputNickname = MutableLiveData<Event<Unit>>()
-    val goToInputNickname : LiveData<Event<Unit>> = _goToInputNickname
+    val goToInputNickname: LiveData<Event<Unit>> = _goToInputNickname
 
-   val email = MutableLiveData("")
+    val email: MutableLiveData<String> = MutableLiveData("")
 
     fun goToInputNickname() {
         _goToInputNickname.value = Event(Unit)
     }
+
+    fun getUserEmail(): String = email.value ?: ""
 }

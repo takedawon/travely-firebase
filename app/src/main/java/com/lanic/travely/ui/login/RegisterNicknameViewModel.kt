@@ -10,7 +10,11 @@ class RegisterNicknameViewModel : BaseViewModel() {
     private val _goToInputBirth = MutableLiveData<Event<Unit>>()
     val goToInputBirth: LiveData<Event<Unit>> = _goToInputBirth
 
+    val nickname: MutableLiveData<String> = MutableLiveData()
+
     fun goToInputBirth() {
         _goToInputBirth.value = Event(Unit)
     }
+
+    fun getNickname(): String = nickname.value ?: ""
 }
