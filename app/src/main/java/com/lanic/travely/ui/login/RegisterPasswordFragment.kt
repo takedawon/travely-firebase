@@ -25,7 +25,7 @@ class RegisterPasswordFragment : BaseFragment<FragmentRegisterPasswordBinding>(
 
     private val viewModel: RegisterPasswordViewModel by viewModels()
 
-    val passArgs: RegisterPasswordFragmentArgs by navArgs()
+    private val passArgs: RegisterPasswordFragmentArgs by navArgs()
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -54,7 +54,6 @@ class RegisterPasswordFragment : BaseFragment<FragmentRegisterPasswordBinding>(
                     password = viewModel.getUserPassword()
                 }
                 viewModel.setRegisterUserData(registerData)
-
                 viewModel.signUp()
             }
         })
