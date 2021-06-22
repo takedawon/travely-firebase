@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.lanic.travely.R
 import com.lanic.travely.base.BaseFragment
@@ -15,6 +16,13 @@ import com.lanic.travely.databinding.FragmentLoginBinding
 import com.lanic.travely.databinding.FragmentRegisterEmailBinding
 import com.lanic.travely.utils.EventObserver
 import com.lanic.travely.utils.isCheckEmail
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import reactivecircus.flowbinding.android.view.clicks
+import reactivecircus.flowbinding.android.widget.textChanges
 
 class RegisterEmailFragment : BaseFragment<FragmentRegisterEmailBinding>(
     layoutId = R.layout.fragment_register_email
@@ -22,6 +30,7 @@ class RegisterEmailFragment : BaseFragment<FragmentRegisterEmailBinding>(
 
     private val viewModel: RegisterEmailViewModel by viewModels()
 
+    @FlowPreview
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.vm = viewModel
@@ -40,6 +49,13 @@ class RegisterEmailFragment : BaseFragment<FragmentRegisterEmailBinding>(
                 } else {
                     error = ""
                     isErrorEnabled = false
+                    binding.tieEmail.textChanges()
+                        .distinctUntilChanged()
+                        .debounce(500L)
+                        .onEach {
+                            viewModel.checkEmail(it.toString())
+                        }
+                        .launchIn(lifecycleScope)
                 }
             }
         })

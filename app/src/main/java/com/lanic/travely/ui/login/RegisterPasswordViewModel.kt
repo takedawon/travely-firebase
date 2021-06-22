@@ -57,6 +57,6 @@ class RegisterPasswordViewModel : BaseViewModel() {
     private fun saveUserData(userData: RegisterData) {
         db.collection("user")
             .document(auth.uid!!)
-            .set(mapOf("nickname" to userData.nickname, "birth" to userData.birth))
+            .set(mapOf("email" to userData.email, "nickname" to userData.nickname, "birth" to userData.birth))
     }
 }
